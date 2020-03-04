@@ -858,12 +858,14 @@ MonoBehaviour:
     type: 3}
   treePrefab: {fileID: 629187099214970120, guid: c7da5fde8d20b3947a523bd12a2a20ee,
     type: 3}
+  WallPrefab: {fileID: 1191423829814146343, guid: b74ba0b9a7a36d748bef34806f2d9833,
+    type: 3}
   profileArray:
   - {fileID: 11400000, guid: 7b8b536d14fb73849ba149cf501eb5a5, type: 2}
   - {fileID: 11400000, guid: b8d81ba7714ceb64fa7cef57686482cb, type: 2}
   - {fileID: 11400000, guid: 5ce0d0ec0b203eb4e95bae3454b91752, type: 2}
   - {fileID: 11400000, guid: 1e18ceacb4be56d448888cc6442b9209, type: 2}
-  wallProfile: {fileID: 11400000, guid: 87ae1c9e30494de4286d03d35e33cdac, type: 2}
+  wallProfile: {fileID: 11400000, guid: 4a7aa81f6b43ddb45b0653ee0638fe16, type: 2}
 --- !u!4 &1844594821
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,7 +1143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d03cb5d9f9a6849bfbcbebcf9f1be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nuke: {fileID: 7422879358150832639, guid: 05ac3443daf6280459f6d813e27ec394, type: 3}
   speed: 5
   rotSpeed: 100
   rollResetSpeed: 10

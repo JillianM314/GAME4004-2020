@@ -132,17 +132,22 @@ namespace GRIDCITY
                             child = Instantiate(treePrefab, transform.position + Vector3.up * 1.01f, Quaternion.identity, this.transform);                          
                             int meshNum = myProfile.mainBlocks.Length;
                             int matNum = myProfile.mainMaterials.Length;
-                            child.GetComponent<TreeTowerBlock>().Initialize(recursionLevel + 1, myProfile.mainMaterials[Random.Range(0, matNum)], myProfile.mainBlocks[Random.Range(0, meshNum)]);    
+                            child.GetComponent<TreeTowerBlock>().Initialize(recursionLevel + 1, myProfile.mainMaterials[Random.Range(0, matNum)], myProfile.mainBlocks[Random.Range(0, meshNum)]);
                         };
 
                         random = Random.Range(0, 10);
-                        if ((random<5)&&(!cityManager.CheckSlot(x, y+1, z))) //building west (-x direction)
+                        if ((random<5)&&(!cityManager.CheckSlot(x-1, y+5, z))) //building west (-x direction)
                         {
-                            cityManager.SetSlot(x, y+1, z, true);
+                            cityManager.SetSlot(x-1, y+1, z, true);
                             child = Instantiate(treePrefab, transform.position + Vector3.up * 1.01f, Quaternion.identity, this.transform);
                             int meshNum = myProfile.mainBlocks.Length;
                             int matNum = myProfile.mainMaterials.Length;
-                            child.GetComponent<TreeTowerBlock>().Initialize(recursionLevel + 1, myProfile.mainMaterials[Random.Range(0, matNum)], myProfile.mainBlocks[Random.Range(0, meshNum)]);    
+                            child.GetComponent<TreeTowerBlock>().Initialize(recursionLevel + 1, myProfile.mainMaterials[Random.Range(0, matNum)], myProfile.mainBlocks[Random.Range(0, meshNum)]);
+                            if (x < 5)
+                            {
+                                new GameObject("Tree Child").AddComponent<TreeTowerBlock>().
+                                    Initialize(recursionLevel + 5, myProfile.mainMaterials[Random.Range(0, matNum)], myProfile.mainBlocks[Random.Range(0, meshNum)]);
+                            }
                         };
                         
                         random = Random.Range(0, 10);
